@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<br>
+<h2>enter account name</h2>
+<form action = '.' method = 'POST'>
+{% csrf_token %}
+{{form.account}}
+<br>
+<br>
+<button type="submit">submit</button>
+</form>
+<br>
+	
+    {% for msg in msg %}
+    	{{ msg }}
+	{% endfor %}  
+
+	<br>
+
+    {% for key, value in container.items %}
+    	<a href="https://sshbox:{{ value }}">{{ key }}</a></li>
+    {% endfor %}
+
+<br>
+<br>
+<a href="/list"> return</a> 
+<br>
+<a href="/"> home</a> <br>
+
+</body>
+</html>

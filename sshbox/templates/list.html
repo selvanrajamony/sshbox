@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+	<h1>Account List</h1>
+	<h3>The below listed accounts can be only connected via sshbox</h3>
+
+		{% for account in accounts %}
+
+			<li>{{account|safe}}</li>
+
+		{% endfor %}
+
+	<h1>Connect to a Account </h1>
+
+	<h2>currently active accounts</h2>
+
+		{% for key, value in container.items %}
+    		
+    		<li><a href="https://sshbox:{{ value }}">{{ key }}</a></li>
+		
+		{% endfor %}
+
+		<br>
+	
+	<h2>If the account you need to connect is not in the active account list, <a href="/launch"> Click here</a></h2> 
+	<br>	
+
+</body>
+</html>
